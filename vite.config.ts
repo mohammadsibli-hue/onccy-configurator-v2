@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
           '@': path.resolve(__dirname, '.'),
         }
       },
-      base: '/onccy-configurator-v2/',
+      base: '/',
       build: {
         outDir: 'dist',
         assetsDir: 'assets'
