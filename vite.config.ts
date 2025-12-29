@@ -18,6 +18,11 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, '.'),
         }
+      },
+      base: mode === 'production' ? '/onccy-configurator-v2/' : '/',
+      build: {
+        outDir: 'dist',
+        assetsDir: 'assets'
       }
     };
 });
