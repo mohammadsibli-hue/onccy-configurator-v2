@@ -1,0 +1,43 @@
+body {
+  background-color: #e5edf9;
+}
+
+/* Simple CSS snow effect used in the Hero banner */
+.xmas-snow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.xmas-snow::before,
+.xmas-snow::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.8) 0, rgba(255,255,255,0.8) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 0, rgba(255,255,255,0.6) 2px, transparent 3px),
+    radial-gradient(circle, rgba(255,255,255,0.45) 0, rgba(255,255,255,0.45) 2px, transparent 3px);
+  background-size: 12px 12px, 18px 18px, 24px 24px;
+  opacity: 0.9;
+  animation: xmas-snow-fall 22s linear infinite;
+}
+
+.xmas-snow::after {
+  opacity: 0.6;
+  animation-duration: 32s;
+  animation-direction: reverse;
+}
+
+@keyframes xmas-snow-fall {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-25%, 40%, 0);
+  }
+}
